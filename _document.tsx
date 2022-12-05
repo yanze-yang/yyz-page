@@ -42,6 +42,14 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:ital@0;1&display=swap"
             rel="stylesheet"
           />
+
+          <link
+            rel="preload"
+            href="/fonts/FreigeistMono-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin=""
+          />
         </Head>
 
         <body>

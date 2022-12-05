@@ -5,6 +5,12 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Container from "./Container";
 
+export async function getStaticProps() {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
+
 const Section = styled.div`
   background-color: #deefff;
 `;

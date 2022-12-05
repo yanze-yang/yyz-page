@@ -57,18 +57,44 @@ const Hero = styled.div`
 const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 3.1rem;
+  gap: 3rem;
   max-width: 390px;
 
   @media screen and (min-width: 850px) {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 2rem;
     max-width: 1024px;
   }
 `;
 
 const Item = styled.div`
+  border-bottom: 1px #2d2d2d solid;
+  padding-bottom: 2rem;
+  transition: 0.2s ease-out;
+
+  :hover {
+    cursor: pointer;
+    transform: translateX(-5px);
+  }
+
+  @media screen and (min-width: 850px) {
+    border: 1px #2d2d2d solid;
+    padding: 2rem;
+
+    :hover {
+      cursor: pointer;
+      transform: translateY(-5px);
+    }
+  }
+`;
+
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.3rem;
+
   .date {
     font-size: 14px;
     line-height: 18px;
@@ -82,31 +108,42 @@ const Item = styled.div`
     /* font-size: 32px; */
     font-size: 26px;
     line-height: 37px;
-    letter-spacing: -0.1rem;
-
-    margin-top: 8px;
-    margin-bottom: 1.5rem;
   }
 
-  .content {
+  .job {
     font-weight: 400;
+    font-style: italic;
     font-size: 18px;
     line-height: 23px;
   }
 
   @media screen and (min-width: 850px) {
     .title {
-      font-family: "Freigeist Mono";
-      font-style: normal;
-      font-weight: 500;
-      /* font-size: 32px; */
       font-size: 32px;
       line-height: 42px;
       letter-spacing: -0.1rem;
-
-      margin-top: 0.7rem;
-      margin-bottom: 2rem;
     }
+  }
+`;
+
+const Content = styled.div`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+`;
+
+const Button = styled.div`
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1.3rem;
+  border: 1px #2d2d2d solid;
+
+  font-family: "Freigeist Mono";
+
+  :hover {
+    cursor: pointer;
+    color: #023ea6;
+    border: 1px #023ea6 solid;
   }
 `;
 
@@ -117,33 +154,45 @@ export default function ExperienceIndex() {
         <Layout>
           <Navbar />
           <Hero>
-            <div>Work Experience</div>
+            <div>{"Work Experience".toUpperCase()}</div>
             <img src="/no_new_notification 1.svg" alt="image" />
           </Hero>
           <ItemWrapper>
             <Item>
-              <div className="date">2019 - 2020</div>
-              <div className="title">ako.ai</div>
-              <div className="content">
+              <Info>
+                <div className="date">2019 - 2020</div>
+                <div className="title">ako.ai</div>
+                <div className="job">Front End Developer</div>
+              </Info>
+              <Content>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi. Aliquam in hendrerit urna.
-              </div>
+              </Content>
+              <Button>More</Button>
             </Item>
             <Item>
-              <div className="date">2019 - 2020 | AKO.AI</div>
-              <div className="title">Front End Developer</div>
-              <div className="content">
+              <Info>
+                <div className="date">2019 - 2020</div>
+                <div className="title">amy</div>
+                <div className="job">Front End Developer</div>
+              </Info>
+              <Content>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi. Aliquam in hendrerit urna.
-              </div>
+              </Content>
+              <Button>More</Button>
             </Item>
             <Item>
-              <div className="date">2019 - 2020</div>
-              <div className="title">ako.ai</div>
-              <div className="content">
+              <Info>
+                <div className="date">2019 - 2020</div>
+                <div className="title">ako.ai</div>
+                <div className="job">Front End Developer</div>
+              </Info>
+              <Content>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
                 massa mi. Aliquam in hendrerit urna.
-              </div>
+              </Content>
+              <Button>More</Button>
             </Item>
           </ItemWrapper>
         </Layout>

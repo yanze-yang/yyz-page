@@ -10,14 +10,11 @@ const Wrapper = styled.div`
   padding: 0.8rem;
   width: 100%;
   div {
+    transition: 0.2s ease-out;
     &:hover {
       color: #023ea6;
       cursor: pointer;
-      transform: translateY(-0.6);
-      transform: scale(1.05);
-      margin-top: -2px;
-      scale: 1;
-      transition: 0.2s ease-out;
+      transform: translateY(-2px) scale(1.03);
     }
   }
 

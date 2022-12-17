@@ -22,5 +22,6 @@ a {
 
 @font-face {
   font-family: "Freigeist Mono";
-  src: url("/fonts/FreigeistMono-Medium.woff2") format("woff2");
+  src: url("/fonts/FreigeistMono-Medium.woff") format("woff");
+  font-weight: 500;
 }

@@ -111,7 +111,6 @@ const Info = styled.div`
     font-family: "Freigeist Mono";
     font-style: normal;
     font-weight: 500;
-    /* font-size: 32px; */
     font-size: 26px;
     line-height: 37px;
   }
@@ -127,7 +126,7 @@ const Info = styled.div`
     .title {
       font-size: 32px;
       line-height: 42px;
-      letter-spacing: -0.1rem;
+      letter-spacing: -0.05rem;
     }
   }
 `;
@@ -141,15 +140,15 @@ const Content = styled.div`
 const Button = styled.div`
   display: inline-block;
   margin-top: 2rem;
-  padding: 0.5rem 1.3rem;
-  border: 1px #2d2d2d solid;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 1px #2d2d2d solid;
 
   font-family: "Freigeist Mono";
 
   :hover {
     cursor: pointer;
     color: #023ea6;
-    border: 1px #023ea6 solid;
+    border-bottom: 1px #023ea6 solid;
   }
 `;
 

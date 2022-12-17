@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styled from "styled-components";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Container from "./Container";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import Container from "../../components/Container";
 
 export async function getStaticProps() {
   return {

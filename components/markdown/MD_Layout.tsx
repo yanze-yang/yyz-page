@@ -109,8 +109,9 @@ export default function Layout({ children, meta }: any) {
   const company = meta?.company || null;
   const date = meta?.date || null;
   const imgUrl = meta?.imgUrl || null;
+
   return (
-    <>
+    <div style={{ backgroundColor: `#f7f7f7` }}>
       <MDLayout>
         <Navbar />
         <Hero>
@@ -133,6 +134,6 @@ export default function Layout({ children, meta }: any) {
         </Button>
       </MDLayout>
       <Footer />
-    </>
+    </div>
   );
 }

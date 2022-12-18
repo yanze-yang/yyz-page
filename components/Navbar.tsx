@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -27,7 +28,9 @@ const Wrapper = styled.div`
 export default function Navbar() {
   return (
     <Wrapper>
-      <div className="work">Work</div>
+      <Link href="/work-experience">
+        <div className="work">Work</div>
+      </Link>
       <div className="project">Project</div>
       <div className="about">About</div>
     </Wrapper>

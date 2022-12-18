@@ -15,7 +15,7 @@ export const Header1 = styled.div`
 export const Header2 = styled.div`
   font-size: 1.6rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 1.5rem 0 0.4rem 0;
 
   @media screen and (min-width: 850px) {
     font-size: 1.8rem;
@@ -25,7 +25,7 @@ export const Header2 = styled.div`
 // ul and li are used in the .mdx file
 export const Ul = styled.ul`
   /* list-style: none; */
-  margin: 1rem 0;
+  margin: 0;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;

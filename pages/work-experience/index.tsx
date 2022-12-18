@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Container from "../../components/Container";
+import Link from "next/link";
+
+import { Data as WorkData } from "./work.db";
 
 export async function getStaticProps() {
   return {
@@ -79,19 +82,9 @@ const Item = styled.div`
   padding-bottom: 2rem;
   transition: 0.2s ease-out;
 
-  :hover {
-    cursor: pointer;
-    transform: translateX(-5px);
-  }
-
   @media screen and (min-width: 850px) {
     border: 1px #2d2d2d solid;
     padding: 2rem;
-
-    :hover {
-      cursor: pointer;
-      transform: translateY(-5px);
-    }
   }
 `;
 
@@ -107,7 +100,7 @@ const Info = styled.div`
     letter-spacing: 0.1rem;
   }
 
-  .title {
+  .company {
     font-family: "Freigeist Mono";
     font-style: normal;
     font-weight: 500;
@@ -140,15 +133,16 @@ const Content = styled.div`
 const Button = styled.div`
   display: inline-block;
   margin-top: 2rem;
-  padding: 0.3rem 0.1rem;
+  margin-right: 2rem;
+  padding: 0rem 0.1rem;
   border-bottom: 1px #2d2d2d solid;
-
   font-family: "Freigeist Mono";
 
   :hover {
     cursor: pointer;
-    color: #023ea6;
-    border-bottom: 1px #023ea6 solid;
+    background-color: #0b88df;
+    color: #fff;
+    font-weight: 600;
   }
 `;
 
@@ -163,42 +157,21 @@ export default function ExperienceIndex() {
             <img src="/no_new_notification 1.svg" alt="image" />
           </Hero>
           <ItemWrapper>
-            <Item>
-              <Info>
-                <div className="date">2019 - 2020</div>
-                <div className="title">ako.ai</div>
-                <div className="job">Front End Developer</div>
-              </Info>
-              <Content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna.
-              </Content>
-              <Button>More</Button>
-            </Item>
-            <Item>
-              <Info>
-                <div className="date">2019 - 2020</div>
-                <div className="title">amy</div>
-                <div className="job">Front End Developer</div>
-              </Info>
-              <Content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna.
-              </Content>
-              <Button>More</Button>
-            </Item>
-            <Item>
-              <Info>
-                <div className="date">2019 - 2020</div>
-                <div className="title">ako.ai</div>
-                <div className="job">Front End Developer</div>
-              </Info>
-              <Content>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna.
-              </Content>
-              <Button>More</Button>
-            </Item>
+            {WorkData.map((item, idx) => (
+              <Item key={idx}>
+                <Info>
+                  <div className="date">{item.date}</div>
+                  <div className="company">{item.company}</div>
+                  <div className="job">{item.job}</div>
+                </Info>
+                <Content>{item.content}</Content>
+                {item.buttonLink.map((link, idx) => (
+                  <Link href={link.link} key={idx}>
+                    <Button>{link.text}</Button>
+                  </Link>
+                ))}
+              </Item>
+            ))}
           </ItemWrapper>
         </Layout>
       </Container>

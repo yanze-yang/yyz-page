@@ -60,7 +60,7 @@ const Company = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Job = styled.div`
   font-family: "Source Sans Pro";
   font-size: 1.2rem;
   padding: 0.2rem;
@@ -101,23 +101,24 @@ const Wrapper = styled.div`
   align-items: left;
   flex-direction: column;
   padding-top: 0;
-  max-width: 850px;
+  max-width: 700px;
 `;
 
 export default function Layout({ children, meta }: any) {
-  const title = meta?.title || null;
+  const job = meta?.job || null;
   const company = meta?.company || null;
   const date = meta?.date || null;
+  const imgUrl = meta?.imgUrl || null;
   return (
     <>
       <MDLayout>
         <Navbar />
         <Hero>
-          <img src="/no_new_notification 1.svg" alt="image" />
+          <img src={imgUrl} alt="image" />
         </Hero>
         <div>
           <Company>{company}</Company>
-          <Title>{title}</Title>
+          <Job>{job}</Job>
           <Date>{date}</Date>
         </div>
 

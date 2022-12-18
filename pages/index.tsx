@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
+import Footer from "../components/Footer";
 
 const Layout = styled.div`
   display: flex;
@@ -34,9 +35,10 @@ export default function index() {
     <div style={{ backgroundColor: "#deefff" }}>
       <Layout>
         <Link href={"/work-experience"}>Work</Link>
-        <Link href={"/work-experience"}>Project</Link>
-        <Link href={"/work-experience"}>About</Link>
+        <Link href={"/"}>Project</Link>
+        <Link href={"/"}>About</Link>
       </Layout>
+      <Footer />
     </div>
   );
 }

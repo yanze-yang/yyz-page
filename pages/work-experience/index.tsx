@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 import Container from "../../components/Container";
 import Link from "next/link";
 
-import { Data as WorkData } from "./work.db";
+import { Data as WorkData } from "../../utils/work.db";
 
 export async function getStaticProps() {
   return {

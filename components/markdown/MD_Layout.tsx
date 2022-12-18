@@ -56,7 +56,7 @@ const Company = styled.div`
   font-family: "Freigeist Mono";
 
   @media screen and (min-width: 850px) {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 `;
 

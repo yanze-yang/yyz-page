@@ -18,11 +18,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
-module.exports = withMDX({
-  // Append the default value with md extensions
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-});
-
-module.exports = nextConfig;
+module.exports = withMDX(nextConfig);
